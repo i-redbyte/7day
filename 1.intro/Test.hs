@@ -16,3 +16,14 @@ lenVec3 x y z = sqrt (x ^ 2 + y ^ 2 + z ^ 2)
 -}
 
 sign x = if x == 0 then 0 else if x > 0 then 1 else (-1)
+
+-- 1.3 Операторы
+
+infix 6 |-|
+x |-| y = if x - y >= 0 then x - y else (-1) * (x - y)
+
+{-
+Используя оператор $, перепишите выражение logBase 4 (min 20 (9 + 7)) без скобок. (Разделяйте все токены одним пробелом.)
+-}
+
+solution1_3 = logBase 4 $ min 20 $ 9 + 7
